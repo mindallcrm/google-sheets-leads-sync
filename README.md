@@ -13,12 +13,17 @@ Your Google Sheet must have the following format:
 
 1. Get access to our Google Script library by sending us an email address, that has access to Google Sheets with leads.
 2. Open Google Sheet with leads and follow to `Extensions > Apps Script`.
-   ![apps-script.png](images/apps-script.png)
-3. Click `Libraries > +`.  
-   ![libraries.png](images/libraries.png)
+
+![apps-script.png](images/apps-script.png)
+
+3. Click `Libraries > +`.
+
+![libraries.png](images/libraries.png)
+
 4. Set Script ID: `1sGy8Yk3FAVJeXszcmOM3jXTboDt_I9laGLDdN6Dd_8bJkdJAa2HVKQD4` and press `Look up`.
    Choose the latest version, keep Identifier unchanged and press `Add`.
-   ![add-library.png](images/add-library.png)
+
+![add-library.png](images/add-library.png)
 
 ## Configure Script
 
@@ -58,15 +63,23 @@ function main() {
 
 1. Save script and press `Run`.
 2. First time you will receive authorization request:
-   ![authorization-required.png](images/authorization-required.png)
+
+![authorization-required.png](images/authorization-required.png)
+
 3. If you have `Google hasn't verified this app` error, simply click `Advanced`
    and `Go to <your porject name> (unsafe)`
-   ![unverified.png](images/unverified.png)
+
+![unverified.png](images/unverified.png)
+
 4. After authorization script will be executed and this is an indicator that everything went smoothly:
-   ![log-good.png](images/log-good.png)
+
+![log-good.png](images/log-good.png)
+
 5. Your Google Sheet with leads will be updated and a new column of sync statuses for every lead will appear.
    However, there might be some errors if lead information is invalid or not properly formatted.
-   ![updated-sheet.png](images/updated-sheet.png)
+
+![updated-sheet.png](images/updated-sheet.png)
+
 6. How to fix these errors:
     - check execution log
       ![log-bad.png](images/log-bad.png)
@@ -76,10 +89,16 @@ function main() {
 
 ## Set Up Continuous Execution
 
-1. Go to `Triggers`:  
+1. Go to `Triggers`:
+
 ![triggers.png](images/triggers.png)
+
 2. Press `+ Add Trigger`.
+
 ![add-trigger.png](images/add-trigger.png)
+
 3. Choose everything as in the screenshot and press `Save`.
+
 ![save-trigger.png](images/save-trigger.png)
-4. That's all! Now the synchronization will be done every minute and leads will be sent to CRM.
+
+4. That's all! Now the synchronization will repeat every minute and leads will be sent to CRM.

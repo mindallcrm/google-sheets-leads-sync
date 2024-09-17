@@ -9,6 +9,8 @@ Your Google Sheet must have the following format:
 | 03/15/2024 02:48:16 | Leonardo DiCaprio | leo@gmail.com  | +1 234 567-890  |                            |
 | 03/15/2024 02:50:16 | Jennifer Aniston  | jenn@proton.me | +374 43-873-329 | Wanna buy a huge penthouse |
 
+Otherwise, you should define **all** columns inside **columnsMapping** config (see available configuration section).
+
 ## Connect Google Script Library
 
 1. Get access to our Google Script library by sending us an email address, that has access to Google Sheets with leads.
@@ -21,7 +23,7 @@ Your Google Sheet must have the following format:
 ![libraries.png](images/libraries.png)
 
 4. Set Script ID: `1sGy8Yk3FAVJeXszcmOM3jXTboDt_I9laGLDdN6Dd_8bJkdJAa2HVKQD4` and press `Look up`.
-   Choose the latest version, keep Identifier unchanged and press `Add`.
+   Choose the **latest** version, keep Identifier unchanged and press `Add`.
 
 ![add-library.png](images/add-library.png)
 
@@ -52,9 +54,17 @@ function main() {
         // Source ID that will be displayed in CRM. Default: Google Sheets Leads
         sourceId: 'Page #48329',
         // Enum value of source. Ask us to get information about available enum values. Default: website
-        soucre: 'facebook',
+        source: 'facebook',
         // URL to send request to. Default: https://crm.mindall.co/api/api/lead/create/byExternalForm
         url: 'https://any-development-server.id/api/create-lead',
+        // Number of column in which to find according information (starting with zero).
+        // Default: name - 1, email - 2, phone - 3, notes - 4
+        columnsMapping: {
+            name: 5,
+            email: 1,
+            phone: 0,
+            notes: 8,
+       },
     })
 }
 ```

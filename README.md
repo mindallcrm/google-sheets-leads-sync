@@ -55,6 +55,8 @@ function main() {
         sourceId: 'Page #48329',
         // Enum value of source. Ask us to get information about available enum values. Default: website
         source: 'facebook',
+        // ID of workflow, that should be assigned to new leads.
+        workflowId: '049162ac-4c6a-4093-8e6f-519085417e96',
         // URL to send request to. Default: https://crm.mindall.co/api/api/lead/create/byExternalForm
         url: 'https://any-development-server.id/api/create-lead',
         // Number of column in which to find according information (starting with zero).

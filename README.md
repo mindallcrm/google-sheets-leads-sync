@@ -60,10 +60,11 @@ function main() {
         // URL to send request to. Default: https://crm.mindall.co/api/api/lead/create/byExternalForm
         url: 'https://any-development-server.id/api/create-lead',
         // Number of column in which to find according information (starting with zero).
+        // Either email or phone must present.
         // Default: name - 1, email - 2, phone - 3, notes - 4
         columnsMapping: {
             name: 5,
-            email: 1,
+            email: null, // In case email is missing
             phone: 0,
             notes: 8,
        },

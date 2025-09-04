@@ -27,6 +27,8 @@ Otherwise, you should define **all** columns inside **columnsMapping** config (s
 
 ![add-library.png](images/add-library.png)
 
+> Make sure that you've set the latest version, `Version 6` on the screenshot above is an example.
+
 ## Configure Script
 
 Now you're ready to add a script to sync leads:
@@ -68,6 +70,10 @@ function main() {
             phone: 0,
             notes: 8,
        },
+        // Pages numbers that should be synced (starting with zero).
+        // Example includes two sheets: second and fourth.
+        // Default: [0] (only first sheet).
+        sheets: [1, 3],
     })
 }
 ```

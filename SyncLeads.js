@@ -1,5 +1,5 @@
 let config = {
-    orgId: '',
+    key: '',
     workflowId: null,
     sourceId: 'Google Sheets Leads',
     source: 'website',
@@ -19,7 +19,7 @@ function _formatRowToValidObject(row) {
     const data = {
         fullName: row[config.columnsMapping.name],
         notes: row[config.columnsMapping.notes],
-        orgId: config.orgId,
+        key: config.key,
         sourceId: config.sourceId,
         source: config.source,
     }
@@ -100,8 +100,8 @@ function syncSheet(sheet) {
 function syncLeads(clientConfig = {}) {
     config = {...config, ...clientConfig}
 
-    if (!config.orgId) {
-        console.error('Organization ID is missing')
+    if (!config.key) {
+        console.error('Organization key is missing')
         return
     }
 

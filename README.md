@@ -40,8 +40,8 @@ Now you're ready to add a script to sync leads:
 ```js
 function main() {
     SyncLeads.syncLeads({
-        // Insert your real organization ID here. (Required)
-        orgId: '699ab1a6-c1e1-426d-bd16-be5d45676ad1',
+        // Insert your integration key here. (Required)
+        key: 'your-integration-key',
     })
 }
 ```
@@ -51,7 +51,7 @@ function main() {
 ```js
 function main() {
     SyncLeads.syncLeads({
-        orgId: '049162ac-4c6a-4093-8e6f-519085417e96',
+        key: 'your-integration-key',
 
         // Source ID that will be displayed in CRM. Default: Google Sheets Leads
         sourceId: 'Page #48329',
